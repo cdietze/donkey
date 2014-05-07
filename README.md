@@ -6,7 +6,11 @@ The idea is that the server provides generic functions that a customized client 
 I created a AngularJS client which can be found in /public/ui/.
 This is customized to my home, so it only serves as an example. Hopefully you're not in my LAN so I'm safe. ;-)
 
-For the server I put together some crude [API documentation](http://docs.donkey.apiary.io).
+I put together some crude [Server API documentation](http://docs.donkey.apiary.io).
+
+![Screenshot](https://thunderklaus.github.com/donkey/images/ScreenShot01.png)
+
+This is a screenshot of my customized UI. If a box has a green background, that system was pinged successfully. Yellow means ping failed.
 
 ## Features
 * **Switches** (sockets) can be triggered on and off.
