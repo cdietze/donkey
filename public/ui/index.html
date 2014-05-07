@@ -1,0 +1,61 @@
+<!doctype html>
+<html ng-app="donkey">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.min.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <script src="ui.js"></script>
+</head>
+<body class="container" ng-controller="RootCtrl">
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3><span class="glyphicon glyphicon-hdd"></span> NAS</h3>
+    </div>
+    <div class="col-xs-12 col-md-6">
+        <div class="panel panel-default" dk-ping="192.168.178.26">
+            <div class="panel-heading">
+                <p>DSM (Synology Diskstation)</p>
+                <button class="btn btn-default" ng-click="wakeOnLan('00113221CF6F')">Wake up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3><span class="glyphicon glyphicon-headphones"></span> Sonos</h3>
+    </div>
+    <div class="col-xs-6 col-md-3" ng-repeat="item in sonosItems">
+        <div class="panel" dk-ping="{{ item.ip }}">
+            <div class="panel-heading">
+                <p>{{ item.label }}</p>
+                <dk-switch-buttons ng-if="item.switchCode" code="{{ item.switchCode }}"></dk-switch-buttons>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3><span class="glyphicon glyphicon-off"></span> Free switch</h3>
+    </div>
+    <div class="col-xs-12 col-md-6">
+        <dk-switch-buttons code="11111/1"></dk-switch-buttons>
+    </div>
+</div>
+
+</body>
+</html>
