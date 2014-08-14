@@ -38,14 +38,13 @@
         <h3><span class="glyphicon glyphicon-headphones"></span> Sonos</h3>
     </div>
     <div class="col-xs-6 col-md-3" ng-repeat="item in sonosItems">
-        <div class="panel" dk-ping="{{ item.ip }}">
+        <div class="panel" ng-class="{'panel-success': item.pingState, 'panel-danger': !!!item.pingState}">
             <div class="panel-heading">
                 <p>{{ item.label }}</p>
-                <dk-switch-buttons ng-if="item.switchCode" code="{{ item.switchCode }}"></dk-switch-buttons>
+                <dk-switch-buttons ng-if="item.switchCode" code="{{ item.switchCode }}" switch-state="{{ item.pingState }}" label="{{item.label}}"></dk-switch-buttons>
             </div>
         </div>
     </div>
-
 </div>
 
 <div class="row">

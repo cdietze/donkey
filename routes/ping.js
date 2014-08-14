@@ -4,7 +4,7 @@ var router = express.Router();
 var ping = require('net-ping');
 
 var pingSession = ping.createSession({
-    timeout: 50
+    timeout: 2000 // in ms
 });
 
 /** A map from IPs to promises */
