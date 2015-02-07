@@ -16,7 +16,7 @@ This is a screenshot of my customized UI. If a box has a green background, that 
 * **Switches** (sockets) can be triggered on and off.
 Requirement for this is that you have a 433 MHz transmitter attached to your Pi.
 [Here is a link to a guide](http://ninjablocks.com/blogs/how-to/7506204-adding-433-to-your-raspberry-pi).
-You will also need a *send* command in your Pi's path, see these projects: [https://github.com/WiringPi](), [https://github.com/ninjablocks/433Utils]()
+You will also need a *send* command in your Pi's path, see these projects: [https://github.com/WiringPi](https://github.com/WiringPi), [https://github.com/ninjablocks/433Utils](https://github.com/ninjablocks/433Utils)
 * **WOL** (Wake on Lan) allows you to wake up devices using their MAC address
 * **Ping** any hosts to see if they are online
 
