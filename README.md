@@ -8,7 +8,7 @@ This is customized to my home, so it only serves as an example. Hopefully you're
 
 I put together some crude [Server API documentation](http://docs.donkey.apiary.io).
 
-![Screenshot](https://thunderklaus.github.com/donkey/images/ScreenShot01.png)
+![Screenshot](https://cdietze.github.com/donkey/images/ScreenShot01.png)
 
 This is a screenshot of my customized UI. If a box has a green background, that system was pinged successfully. Yellow means ping failed.
 
